@@ -1,0 +1,13 @@
+<form (submit)="addTodo(newtodo)">
+<input placeholder="New todo" #newtodo required>
+<button>Add</button>
+</form>
+
+
+<ul><li *ng-for="#todo of todos; #i = index">
+    {{i}}: {{todo}}
+<a href="#" (click)="deleteTodo(i)">X</a>
+</li></ul>
+<div *ng-if="todos.length >=5">
+   5 tasks !
+</div>
